@@ -1,0 +1,69 @@
+@font-face{font-family:'Raleway-Black';src:local('Raleway-Black'),url('https://nomail.com.ua/files/woff/d641109f46a9231b7a92d6a114302a2b.woff') format('woff');}
+@font-face{font-family:'Raleway-Lighter';src:local('Raleway-ExtraLight'),url('https://nomail.com.ua/files/woff/ebd5c800e24e108dd3aeacb28e16c595.woff') format('woff');}
+@font-face{font-family:'Raleway-Light';src:local('Raleway-Light'),url('https://nomail.com.ua/files/woff/6b562d7ca359ccb3259f570bcceb4f70.woff') format('woff');}
+@font-face{font-family:'Raleway-Regular';src:local('Raleway-Regular'),url('https://nomail.com.ua/files/woff/2d4cd8722065da2ac700199273325752.woff') format('woff');}
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:900'); //font-family: 'Yantramanav', sans-serif;
+
+$bg: #191e3f;
+$red: #d25a5e;
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+@mixin media ($size){
+    @media(max-width:$size) {
+        @content;
+    }
+}
+
+
+.wr{
+    // position: relative;
+    max-width: 1170px;
+    width: 95%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+
+}
+
+%num{
+    display: flex;
+    // position: relative;
+    color: rgba(white, 0.03);
+    font-family: 'Yantramanav';
+    font-size: 256px;
+    font-weight: 900;
+    // line-height: 0;
+    justify-content: center;
+    // flex-wrap: wrap;
+
+    &:before{
+        content: attr(data-css);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        // transform: rotate(-90deg);
+        color: white;
+        font-family: Raleway-Lighter;
+        font-size: 24px;
+        font-weight: 100;
+        opacity: 0.5;
+    }
+}
+
+%letter{
+    color: #191e3f;
+    opacity: 0.6;
+    font-family: Raleway-Black;
+    font-size:600px;
+    text-shadow: 0 80px 152px rgba(0, 0, 0, 0.45);
+    
+     
+}
+
+$medium:768px;
+
